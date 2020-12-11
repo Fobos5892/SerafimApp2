@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,45 +8,43 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/parent_Loyaout"
         android:layout_width="match_parent"
-        android:layout_height="421dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_Hallo"
-            android:layout_width="204dp"
+            android:id="@+id/button_hi"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:text="Кнопка привет"
-            tools:layout_editor_absoluteX="113dp"
-            tools:layout_editor_absoluteY="269dp" />
+            android:layout_weight="1"
+            android:text="Кнопка Hi"
+            tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/button_hi"
-            android:layout_width="204dp"
+            android:id="@+id/button_Hallo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_gravity="center"
-            android:text="Кнопка Hi"
-            tools:layout_editor_absoluteX="113dp"
-            tools:layout_editor_absoluteY="403dp" />
+            android:layout_weight="1"
+            android:text="Кнопка привет"
+            tools:ignore="ButtonStyle"
+
+            />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/button_bye"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Кнопка Пока"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="516dp" />
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/parent_Loyaout"
+        android:text="Кнопка Пока" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"></LinearLayout>
+
+
 
 </LinearLayout>
